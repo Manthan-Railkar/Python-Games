@@ -35,44 +35,44 @@ BLUE = (30, 144, 255)
 
 # IMAGES *********************************************************************
 
-bg_img = pygame.image.load('Assets/bg.png')
+bg_img = pygame.image.load('Piano Tiles\\Assets\\bg.png')
 bg_img = pygame.transform.scale(bg_img, (WIDTH, HEIGHT))
 
-piano_img = pygame.image.load('Assets/piano.png')
+piano_img = pygame.image.load('Piano Tiles\\Assets\\piano.png')
 piano_img = pygame.transform.scale(piano_img, (212, 212))
 
-title_img = pygame.image.load('Assets/title.png')
+title_img = pygame.image.load('Piano Tiles\\Assets\\title.png')
 title_img = pygame.transform.scale(title_img, (200, 50))
 
-start_img = pygame.image.load('Assets/start.png')
+start_img = pygame.image.load('Piano Tiles\\Assets\\start.png')
 start_img = pygame.transform.scale(start_img, (120, 40))
 start_rect = start_img.get_rect(center=(WIDTH//2, HEIGHT-80))
 
-overlay = pygame.image.load('Assets/red overlay.png')
+overlay = pygame.image.load('Piano Tiles\\Assets\\red overlay.png')
 overlay = pygame.transform.scale(overlay, (WIDTH, HEIGHT))
 
 # MUSIC **********************************************************************
 
-buzzer_fx = pygame.mixer.Sound('Sounds/piano-buzzer.mp3')
+buzzer_fx = pygame.mixer.Sound('Piano Tiles\\Sounds\\piano-buzzer.mp3')
 
-pygame.mixer.music.load('Sounds/piano-bgmusic.mp3')
+pygame.mixer.music.load('Piano Tiles\\Sounds\\piano-bgmusic.mp3')
 pygame.mixer.music.set_volume(0.8)
 pygame.mixer.music.play(loops=-1)
 
 # FONTS **********************************************************************
 
-score_font = pygame.font.Font('Fonts/Futura condensed.ttf', 32)
-title_font = pygame.font.Font('Fonts/Alternity-8w7J.ttf', 30)
-gameover_font = pygame.font.Font('Fonts/Alternity-8w7J.ttf', 40)
+score_font = pygame.font.Font('Piano Tiles\\Fonts\\Futura condensed.ttf', 32)
+title_font = pygame.font.Font('Piano Tiles\\Fonts\\Alternity-8w7J.ttf', 30)
+gameover_font = pygame.font.Font('Piano Tiles\\Fonts\\Alternity-8w7J.ttf', 40)
 
 title_img = title_font.render('Piano Tiles', True, WHITE)
 
 # BUTTONS ********************************************************************
 
-close_img = pygame.image.load('Assets/closeBtn.png')
-replay_img = pygame.image.load('Assets/replay.png')
-sound_off_img = pygame.image.load("Assets/soundOffBtn.png")
-sound_on_img = pygame.image.load("Assets/soundOnBtn.png")
+close_img = pygame.image.load('Piano Tiles\\Assets\\closeBtn.png')
+replay_img = pygame.image.load('Piano Tiles\\Assets\\replay.png')
+sound_off_img = pygame.image.load("Piano Tiles\\Assets\\soundOffBtn.png")
+sound_on_img = pygame.image.load("Piano Tiles\\Assets\\soundOnBtn.png")
 
 close_btn = Button(close_img, (24, 24), WIDTH // 4 - 18, HEIGHT//2 + 120)
 replay_btn = Button(replay_img, (36,36), WIDTH // 2  - 18, HEIGHT//2 + 115)
@@ -96,7 +96,7 @@ def play_notes(notePath):
 
 # NOTES **********************************************************************
 
-with open('notes.json') as file:
+with open('Piano Tiles\\notes.json') as file:
 	notes_dict = json.load(file)
 
 # VARIABLES ******************************************************************
